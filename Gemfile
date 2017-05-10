@@ -17,15 +17,16 @@ source 'https://rubygems.org'
 
     gem 'rspec-rails', '3.3.2'
     gem 'guard-rspec', '4.6.0'
-    gem 'spork-rails', '4.0.0'
-    gem 'guard-spork', '2.1.0'
+    # gem 'spork-rails', '4.0.0'
+    # gem 'guard-spork', '2.1.0'
+    gem 'spring-commands-rspec'
     gem 'childprocess', '0.3.6'
 
   end
 
     group :test do
       gem 'selenium-webdriver', '2.35.1'
-      gem 'libnotify', '0.8.0' 
+      gem 'libnotify', '0.8.0'
 
     end
 

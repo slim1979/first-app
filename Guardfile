@@ -26,7 +26,7 @@
 require 'active_support/inflector'
 
 
-    guard :rspec, cmd: "bundle exec rspec", all_after_pass: false do
+    guard :rspec, cmd: "spring rspec", all_after_pass: false do
 
       require "guard/rspec/dsl"
       dsl = Guard::RSpec::Dsl.new(self)
