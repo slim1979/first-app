@@ -13,6 +13,8 @@ source 'https://rubygems.org'
   group :development, :test do
     gem 'sqlite3'
     # gem 'rspec'
+    gem 'capybara', '2.2.0'
+
     gem 'rspec-rails', '3.3.2'
     gem 'guard-rspec', '4.6.0'
     gem 'spork-rails', '4.0.0'
@@ -23,8 +25,7 @@ source 'https://rubygems.org'
 
     group :test do
       gem 'selenium-webdriver', '2.35.1'
-      gem 'capybara', '2.2.0'
-      gem 'libnotify', '0.8.0'
+      gem 'libnotify', '0.8.0' 
 
     end
 
