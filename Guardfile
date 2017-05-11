@@ -30,6 +30,7 @@ require 'active_support/inflector'
 
       require "guard/rspec/dsl"
       dsl = Guard::RSpec::Dsl.new(self)
+      watch('config/routes.rb')
 
       # Feel free to open issues for suggestions and improvements
 
@@ -55,8 +56,6 @@ require 'active_support/inflector'
           rspec.spec.call("acceptance/#{m[1]}")
         ]
 
-
-
       end
 
       # Rails config changes
@@ -74,8 +73,6 @@ require 'active_support/inflector'
       watch(%r{^spec/acceptance/steps/(.+)_steps\.rb$}) do |m|
         Dir[File.join("**/#{m[1]}.feature")][0] || "spec/acceptance"
       end
-
-      watch('config/routes.rb')
 
         # Custom Rails Tutorial specs
         watch(%r{^app/controllers/(.+)_(controller)\.rb$}) do |m|

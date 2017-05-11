@@ -13,7 +13,7 @@ source 'https://rubygems.org'
 
 
   group :development, :test do
-    # gem 'sqlite3'
+    gem 'sqlite3'
     # gem 'rspec'
     gem 'capybara', '2.2.0'
 
