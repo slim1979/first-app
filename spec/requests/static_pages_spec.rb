@@ -17,10 +17,10 @@ describe "Static pages" do
       expect(page).to have_title(" #{@basic_title}")
     end
 
-    it 'не должно быть заголовка Home' do
-      visit '/static_pages/home'
-      expect(page).not_to have_title(" | Home")
-    end
+    # it 'не должно быть заголовка Home' do
+    #   visit '/static_pages/home'
+    #   expect(page).not_to have_title(" | Home")
+    # end
   end
 
 

@@ -1,5 +1,5 @@
 module ApplicationHelper
-
+  # на случай, если у страницы нет своего заголовка :title
     def full_title(page_title)
       base_title = 'Ruby on Rails Tutorial Sample App'
       if page_title.empty?
