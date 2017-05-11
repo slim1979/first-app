@@ -82,8 +82,6 @@ RSpec.configure do |config|
   # the seed, which is printed after each run.
   #     --seed 1234
 
-
-
   # Seed global randomization in this process using the `--seed` CLI option.
   # Setting this allows you to use `--seed` to deterministically reproduce
   # test failures related to randomization by passing the same `--seed` value
@@ -91,5 +89,7 @@ RSpec.configure do |config|
   Kernel.srand config.seed
 =end
 config.order = :random
+
 config.include Capybara::DSL
+
 end
