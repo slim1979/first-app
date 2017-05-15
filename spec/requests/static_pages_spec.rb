@@ -5,64 +5,31 @@ describe "Static pages" do
 
   @basic_title = 'Ruby on Rails Tutorial Sample App'
 
+  subject { page }
+
   describe "Home page" do
-
-    it "should have the content 'Sample App'" do
-      visit '/static_pages/home'
-      expect(page).to have_content('Sample App')
-    end
-
-    it 'должен быть заголовок Ruby on Rails Tutorial Sample App' do
-      visit '/static_pages/home'
-      expect(page).to have_title(" #{@basic_title}")
-    end
-
-    # it 'не должно быть заголовка Home' do
-    #   visit '/static_pages/home'
-    #   expect(page).not_to have_title(" | Home")
-    # end
+    before { visit root_path }
+    it { should have_content('Sample App') }
+    it { should have_title("Ruby on Rails Tutorial Sample App | Home") }
   end
 
-
   describe "Help page" do
-
-    it "should have the content 'Vishenka'" do
-      visit '/static_pages/help'
-      expect(page).to have_content('Vishenka')
-    end
-
-    it 'должен быть заголовок Ruby on Rails Tutorial Sample App | Help' do
-      visit '/static_pages/help'
-      expect(page).to have_title(" #{@basic_title} | Help")
-    end
-
+    before {visit help_path}
+    it {should have_content('Vishenka')}
+    it {should have_title("Ruby on Rails Tutorial Sample App | Help")}
   end
 
 
   describe "About page" do
-
-  it "should have the content 'About Us'" do
-    visit '/static_pages/about'
-    expect(page).to have_content('About Us')
+    before {visit about_path}
+    it {should have_content('About us')}
+    it {should have_title("Ruby on Rails Tutorial Sample App | About")}
   end
-
-  it 'должен быть заголовок Ruby on Rails Tutorial Sample App | About' do
-    visit '/static_pages/about'
-    expect(page).to have_title(" #{@basic_title} | About")
-  end
-end
 
   describe "Contacts page" do
-
-  it "should have the content 'Contacts'" do
-    visit '/static_pages/contacts'
-    expect(page).to have_content('Contacts')
+    before {visit contacts_path}
+    it {should have_content('Contacts')}
+    it {should have_title("Ruby on Rails Tutorial Sample App | Contacts")}
   end
-
-  it 'должен быть заголовок Ruby on Rails Tutorial Sample App | Contacts' do
-    visit '/static_pages/contacts'
-    expect(page).to have_title(" #{@basic_title} | Contacts")
-  end
-end
 
 end
