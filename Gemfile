@@ -1,15 +1,18 @@
 source 'https://rubygems.org'
   ruby '2.3.1'
 
-  gem 'rails', '4.0.8'
+  gem 'rails', '4.0.4'
+  gem "sass-rails", "~> 4.0.2"
+  gem 'bootstrap-sass'
   gem 'guard-bundler', require: false
-  gem 'sass-rails', '4.0.1'
+  # gem 'sass-rails', '4.0.1'
   gem 'uglifier', '2.1.1'
   gem 'coffee-rails', '4.0.1'
   gem 'jquery-rails', '2.2.1'
   gem 'turbolinks', '1.1.1'
   gem 'jbuilder', '1.0.2'
   gem 'pg', '0.15.1'
+  gem 'actionpack', '>=3.0'
 
 
   group :development, :test do
